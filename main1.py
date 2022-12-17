@@ -1,53 +1,73 @@
-lst1=[]
+it_companies={'Facebook','Google','Microsoft','Apple','IBM','Oracle','Amazon',}
+A={19,22,24,20,25,26}
+B={19,22,20,25,26,24,28,27}
+age=[22,19,24,25,26,24,25,24]
+print("IT Companies :- ",it_companies)
+print("Set A :- ",A)
+print("Set A :- ",A)
+print("\n")
+print("\n")
 
-lst2=[20,20.6,"shivam",'shARma',2419]
+length=len(it_companies)
+print("Length of it companies :- ",length)
 
-len_lst2=len(lst2)
-print(len_lst2)
-
-print("first item ",lst2[0])
-
-print("middle item ",lst2[len_lst2//2])
-
-print("first item ",lst2[-1])
-
-mixed_data=['Shivam',18,5.6,'married','kyu batau?']
-
-it_companies=['Facebook','Google','Microsoft','Apple','IBM','Oracle',"Amazon"]
-
-print(it_companies)
-
-len_companies=len(it_companies)
-
-print(len_companies)
-
-print("first item ",it_companies[0])
-
-print("middle item ",it_companies[(len_companies//2)])
-
-print("first item ",it_companies[-1])
-
-it_companies[2]='Tata elxsi'
-
-print(it_companies)
-
-it_companies.append("Adani port")
-
-#middle adding program
-#will do it later
+it_companies.add("Twitter")
+elements_it={"it1","it2","it3"}
+new=it_companies.union(elements_it)
+print("After joining new it companies :- ",new)
+it_companies.remove("Apple")
+print("New dict after removing :- ",it_companies)
 
 
-it_companies[1]=it_companies[1].upper()
+C=A.union(B)
+print("A dictionary after joining with B :- ",C)
 
-#it_companies.join("#")
+D=A.intersection(B)
+print("Intersection between A and B :- ",D)
 
-if "IBM" in it_companies:
-    print("Yes !! IBM is in the list")
+sub_set=A.issubset(B)
+print("Is A subset of B :- ",sub_set)
 
-it_companies.sort()
-print("sorted list ",it_companies)
+E=A.isdisjoint(B)
 
-print(it_companies.reverse())
+print("Is A and B disjoint se ? ",E)
 
-# print(it_companies.slice[0:3])
+F=A.union(B)
+f2=B.union(A)
+print("A join with B :- ",F)
+print("B join with A :- ",f2)
 
+print(A.symmetric_difference(B))
+
+#deleting sets A and B
+del(A)
+del(B)
+
+new_age=set(age)
+
+print("Length of age in list :- ",len(age))
+print("Length of age in dict :- ",len(new_age))
+
+
+#comparing the length.....
+if len(age) > len(new_age):
+    print('Length of age in list is bigger by ',len(age)-len(new_age))
+else:
+    print('Length of age in dict is bigger by ',len(new_age)-len(age))
+
+
+string="\t\t**STRING**\n\ni. String is immutable.\nii. String are written in single or double quotes\nExample :- name='Shivam'"
+
+lst="\t\t**LIST**\n\ni. List is mutable.\nii. List consumes more memory.\niii. List are written between square brackets [ ].\nExample :- [1,2,3,4,'hello']"
+
+tple="\t\t**TUPLE**\n\ni. Tuples are immutable.\nii. Tuples consumes less space the list.\niii. Tuples are written between paranthesis brackets ( ).\nExample :- (1,2,3,4,'hello')"
+
+st="\t\t**SETS**\n\ni. Sets are immutable.\nii. Sets consumes less space the list.\niii. Sets are written between curly braces { }.\nExample :- {1,2,3,4,'hello'}"
+
+total=[string,lst,tple,st]
+for j in range(4):
+    print("\n")
+    print(total[j],end="")
+    print("\n")
+    for i in range(10):
+        print("----",end="")
